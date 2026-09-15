@@ -1,0 +1,482 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Evidence index — Alejandro Pantoja</title>
+<meta name="description" content="What I built, what I found, which of it is public and runnable, and what I do not claim.">
+
+<link rel="canonical" href="https://alexpantoja90210.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Alejandro Pantoja">
+<meta property="og:url" content="https://alexpantoja90210.github.io/">
+<meta property="og:title" content="Evidence index — what I built, and what I don't claim">
+<meta property="og:description" content="Some of it is public code you can read and run. Some is enterprise work verifiable only through references. This page says which is which.">
+<meta property="og:image" content="https://alexpantoja90210.github.io/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="627">
+<meta property="og:image:alt" content="Evidence index — what I built, what I found, and what I do not claim.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Evidence index — what I built, and what I don't claim">
+<meta name="twitter:description" content="Some of it is public code you can read and run. Some is enterprise work verifiable only through references. This page says which is which.">
+<meta name="twitter:image" content="https://alexpantoja90210.github.io/og.png">
+<style>
+:root{
+  --bg:#fbfaf8; --fg:#1a1a19; --muted:#6b6a66; --line:#e2e0da;
+  --accent:#1f4d3d; --chip:#eef1ee; --warn:#8a6d1f;
+  --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#151614;--fg:#e8e6e1;--muted:#9d9b95;--line:#2e302c;
+        --accent:#8fc7ae;--chip:#20231f;--warn:#d8b95c;}
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);
+  font:16px/1.62 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  -webkit-font-smoothing:antialiased}
+.wrap{max-width:820px;margin:0 auto;padding:56px 22px 96px}
+h1{font-size:1.85rem;line-height:1.2;margin:0 0 6px;letter-spacing:-.02em}
+h2{font-size:1.18rem;margin:52px 0 14px;letter-spacing:-.01em;
+   padding-bottom:8px;border-bottom:1px solid var(--line)}
+h3{font-size:1rem;margin:28px 0 8px}
+p{margin:0 0 15px}
+.sub{color:var(--muted);margin:0 0 30px;font-size:1.02rem}
+a{color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(127,127,127,.35)}
+a:hover{border-bottom-color:currentColor}
+code{font-family:var(--mono);font-size:.86em;background:var(--chip);
+  padding:1px 5px;border-radius:4px}
+.scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 0 18px}
+table{border-collapse:collapse;width:100%;font-size:.93rem;min-width:540px}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-weight:600;font-size:.78rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+tr:last-child td{border-bottom:none}
+.mirror{border:1px solid var(--warn);border-radius:6px;padding:12px 16px;
+  margin:0 0 28px;color:var(--fg);background:transparent;font-size:.94rem}
+.mirror strong{color:var(--warn)}
+.note{border-left:3px solid var(--accent);padding:2px 0 2px 16px;margin:0 0 20px;color:var(--muted)}
+.warnbox{border:1px solid var(--line);border-left:3px solid var(--warn);
+  padding:14px 16px;border-radius:0 6px 6px 0;margin:0 0 20px;font-size:.94rem}
+ul{margin:0 0 15px;padding-left:20px}
+li{margin-bottom:7px}
+.chip{display:inline-block;background:var(--chip);border-radius:999px;
+  padding:2px 9px;font-size:.72rem;letter-spacing:.04em;color:var(--muted);
+  text-transform:uppercase;font-weight:600;white-space:nowrap}
+.foot{margin-top:60px;padding-top:20px;border-top:1px solid var(--line);
+  color:var(--muted);font-size:.88rem}
+.kv{font-family:var(--mono);font-size:.85rem;white-space:nowrap}
+.lead{font-size:1.04rem}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<div class="mirror">
+<strong>This is a mirror, not the original.</strong> This copy is served from Amazon
+S3 through CloudFront as a deliberate infrastructure exercise (Jira IA-126). The
+canonical page lives at
+<a href="https://alexpantoja90210.github.io/">alexpantoja90210.github.io</a> and is
+the one referenced from my CV and LinkedIn.
+<br>
+Snapshot taken <strong>15 September 2026</strong>. This mirror is not kept in sync:
+if the date above is old, the canonical page is ahead of it.
+</div>
+
+<h1>Evidence index</h1>
+<p class="sub">Alejandro Pantoja — Senior Product &amp; Delivery Manager.<br>
+What I built, what I found, which of it you can open and run yourself, and what I
+do not claim at all.</p>
+
+<div class="note">
+<p><strong>Why this page exists, and what it is not.</strong> Some of what I claim
+is public code you can read and run. Some is enterprise work under employment
+terms, verifiable only through references and conversation. <strong>This page does
+not turn the second kind into the first</strong> — it says which is which, and then
+states plainly what I do not claim at all.</p>
+</div>
+
+<h2>Where the work comes from</h2>
+
+<p>Three contexts, and <strong>everything in all three was built and
+delivered.</strong> What changes between them is the customer and the scale, not
+whether it shipped.</p>
+
+<div class="scroll">
+<table>
+<tr><th>Context</th><th>Customer</th><th>Scale</th></tr>
+
+<tr>
+  <td><span class="chip">2008–2024 · GE</span><br><strong>Enterprise delivery</strong><br>
+      Aviation, Power and Vernova. Infrastructure, engineering applications,
+      cloud migration, IT separation. Manager to Senior Manager.</td>
+  <td>Business units, engineering organisations, and the IT teams that ran on
+      what I delivered</td>
+  <td>Portfolios of 10+ concurrent programs · a 12-engineer organisation, up to
+      ~30 matrixed · budgets owned and reported to global leadership</td>
+</tr>
+
+<tr>
+  <td><span class="chip">2025– · Independent</span><br><strong>Consulting</strong><br>
+      Delivery operations and technology modernisation for clients in the U.S.
+      and LATAM.</td>
+  <td>External clients</td>
+  <td>8–10 concurrent engagements at 95% on-time</td>
+</tr>
+
+<tr>
+  <td><span class="chip">2026 · Applied AI</span><br><strong>Six products, built and shipped</strong><br>
+      Written to answer a question I could not answer by reading: can you tell
+      whether an AI solution works, what it costs, and when to stop it?</td>
+  <td>Independent</td>
+  <td>Six products · five closed, one stopped on evidence · 25 defects raised and
+      tracked</td>
+</tr>
+</table>
+</div>
+
+<h2>What I built</h2>
+
+<p>Not managed at a distance — designed, written, tested and committed. The
+repositories below are public and every claim in this section is readable in
+them.</p>
+
+<p>The six, named — with the question each was built to answer. The one that was
+stopped is listed with the rest rather than left out.</p>
+
+<div class="scroll">
+<table>
+<tr><th>Product</th><th>The question it answers</th><th>Outcome</th></tr>
+
+<tr>
+<td><strong>AWS FinOps Guardian</strong></td>
+<td>How do you watch a live cloud account without the watcher being able to break
+it?</td>
+<td><strong>Closed.</strong> Read-only proven from inside the account:
+<strong>11/11 mutations denied, 0 inconclusive, 5/5 reads working</strong></td>
+</tr>
+
+<tr>
+<td><strong>FinOps Copilot</strong></td>
+<td>Where is the money going, and what do I fix first?</td>
+<td><strong>Closed.</strong> Caught two real bugs — and a third in my own quality
+gate, which had been passing everything</td>
+</tr>
+
+<tr>
+<td><strong>Ops Triage Copilot</strong></td>
+<td>Can an agent triage incidents without touching the infrastructure?</td>
+<td><strong>Closed.</strong> It proposes and never acts. A no-hallucination gate
+caught metric evidence emitted as free text, before delivery</td>
+</tr>
+
+<tr>
+<td><strong>Migration Planner</strong></td>
+<td>What moves, in what order, and what will it cost?<br>
+<strong>Benchmarked against a real 100-server estate and the four-wave plan five
+IT teams drew for it.</strong> Most planning tools never get a benchmark — they
+run on a fixture built to agree with them. This one was run against an estate I
+migrated at GE and against a plan made by people who had context the tool does not
+model.<br>
+<strong>Not a verdict on the human plan.</strong> Those four waves carry blast
+radius, team availability, change windows and internal policy, and none of that
+exists in an inventory. <strong>Neither ordering is complete alone:</strong>
+people keep owning the schedule; a machine checks the invariant before anyone
+signs.</td>
+<td><strong>Closed.</strong> The documented dependencies <strong>held</strong> —
+100 servers, <strong>0 contract violations, no cycles, 44 of 44 resolving</strong>
+under a check built to break them.<br>
+Then the two orderings disagreed on <strong>all 44</strong>: the drawn plan uses
+four waves, the documented dependencies support two. They optimise different
+things, and that is the finding.<br>
+<strong>It plans; it does not move data.</strong> The cost figure is the target
+at public list prices — a ceiling, not a costing, and <strong>no saving is
+claimed.</strong></td>
+</tr>
+
+<tr>
+<td><strong>Agent-as-analyst</strong></td>
+<td>Can an agent reproduce an analyst's deliverable, and at what cost?<br>
+<strong>Benchmarked against another analyst's published project</strong> — the
+dataset, the question set and the dashboard are theirs, not mine. That repository
+carries no licence, so it is <strong>linked, never copied:</strong> fetch it from
+the source and my harness runs against the same input.<br>
+<strong>The success criterion was frozen before the first API call and bound to
+the run.</strong> The runner writes the pre-registration's commit hash into the run
+config, so <em>a run whose hash is not an ancestor of the reported results is not
+scored.</em><br>
+<strong>Not a validated benchmark.</strong> The dataset is public and
+third-party, the question set is someone else's, and <strong>the harness and the
+scorer are mine.</strong> Nobody independent validated this result.</td>
+<td><strong>Closed. 11 of 13</strong> objective questions, <strong>zero invented
+figures</strong> — 930,510 tokens, 12.8 minutes, 97,498 tickets.<br>
+And the part worth keeping over the score: <strong>a hypothesis of my own,
+registered in advance, was refuted by the data and published anyway.</strong></td>
+</tr>
+
+<tr>
+<td><strong>RCA-with-context pilot</strong></td>
+<td>Does supplying metrics and a dependency graph improve root-cause analysis?<br>
+<strong>Benchmarked against the open question Microsoft Research left at the end of
+its own paper.</strong> They fed a model only an incident's title and summary,
+across more than 40,000 incidents from over 1,000 services, and closed by asking:
+<em>"how can we incorporate additional context about the incident, such as
+discussion entries, logs, service metrics, and even dependency graphs of the
+impacted services to improve the diagnosis?"</em> I built a three-node chain on
+AWS to answer it with faults I injected myself.<br>
+<a href="https://www.microsoft.com/en-us/research/blog/large-language-models-for-automatic-cloud-incident-management/">Large
+language models for automatic cloud incident management</a> — Microsoft
+Research.<br>
+<strong>Not a replication.</strong> There is no 40,000-incident corpus here and
+none is claimed. Their contribution is scale; mine was a dependency a machine
+could not fake.</td>
+<td><strong>Stopped on evidence.</strong> No incident in the corpus required the
+graph, so the pilot could not test the thing it existed to test. Not delivered,
+and that is the recorded result rather than a silence</td>
+</tr>
+</table>
+</div>
+
+<p>The engineering underneath them, by theme rather than by product — several of
+these are shared across more than one of the six.</p>
+
+<h3>Infrastructure and governance, in code</h3>
+<ul>
+<li>A full <strong>Terraform stack</strong> for a cloud-watching service, applied
+<strong>plan-first</strong> — every change previewed and approved before it
+touches the account, with the provider pinned by lockfile.</li>
+<li>An IAM role built as a <strong><code>NotAction</code> deny-by-default</strong>:
+it permits an enumerated read set and denies everything outside it, including
+AWS actions that do not exist yet. The earlier version enumerated thirteen
+forbidden actions; I replaced it because a list of prohibitions is stale the day
+the provider ships one more service.</li>
+<li>A <strong>runtime verifier</strong> in bash, shipped to the instance over
+SSM, that runs under the role itself and tries to mutate things. Written in bash
+rather than Python because installing a package onto the machine under audit
+would mutate the subject of the test.</li>
+<li><strong>No inbound admin access:</strong> no port 22, no key pair, Session
+Manager only. Budget measured on gross spend so credits cannot hide overspend.</li>
+</ul>
+
+<h3>A migration planner, engine and checker kept apart</h3>
+<ul>
+<li>An <strong>inventory contract</strong> that rejects any server depending on
+an ID absent from the inventory — written before the engine, with a negative test
+that goes red when the rule is disabled.</li>
+<li>A <strong>dependency graph with cycle detection</strong> and topological wave
+layering, deterministic on tie-break so the same inventory always yields the same
+plan.</li>
+<li>A <strong>rightsizing and TCO engine</strong>: cheapest instance type that is
+never smaller than the source, costed from a dated price catalog that carries its
+own provenance.</li>
+<li><code>verify_waves</code> — a checker that <strong>never regenerates the plan
+it judges</strong>, so it can check a plan drawn by people as readily as one the
+planner built. A checker that regenerates would only confirm the generator agrees
+with itself.</li>
+<li>A <strong>converter</strong> from a real spreadsheet to the contract's shape
+that keeps only what resolves and <strong>names every value it drops</strong>.</li>
+</ul>
+
+<h3>Agents that read and cannot write</h3>
+<ul>
+<li><strong>Read-only tool layers</strong> over real AWS data — cost, CloudWatch
+metrics, resource inventory. The critical ranking is <strong>derived in
+code</strong>, not left to the model, because a recommendation you cannot
+reproduce is not a recommendation.</li>
+<li>An <strong>incident triage agent</strong> that ranks causes by severity ×
+change-correlation and proposes a runbook step. It proposes; it never acts.</li>
+<li><strong>Eval harnesses with negative tests wired into CI</strong>: each check
+family has a deliberately corrupted artifact that must turn it red. A gate that
+can only pass is not a gate.</li>
+<li><strong>Consumption bounded in code</strong> before the API key ever entered
+CI — iteration cap, token accounting, budget cap. An unbounded loop with a
+credential in CI is an open invoice.</li>
+<li>A <strong>fault-injection pilot</strong>: a real three-node chain on AWS with
+physically injected failures, so the ground truth came from an action outside the
+model's reach rather than from whoever scored the answers.</li>
+</ul>
+
+<p class="lead"><strong>Stack:</strong> Python · bash · PowerShell · Terraform/HCL ·
+AWS (IAM, EC2, SSM, CloudWatch, Cost Explorer, Budgets) · GitHub Actions ·
+Jira + Confluence.</p>
+
+<h2>What I found</h2>
+
+<p>Building was the means. These are the conclusions, each one checkable and each
+one stated so that someone can disagree by pointing at data.</p>
+
+<div class="scroll">
+<table>
+<tr><th>Finding</th><th>Why it holds</th></tr>
+
+<tr>
+<td><strong>A spreadsheet holds a schedule; a graph holds an invariant.</strong>
+Benchmarked against a real 100-server estate and the four-wave plan drawn for it,
+the two orderings disagree on all 44 documented dependencies — because they
+optimise different things. The answer is not to replace one with the other: people
+keep owning the schedule, and a machine checks the invariant before anyone signs.</td>
+<td>The comparison is reproducible from the repo. The drawn plan encodes blast
+radius, team availability and change windows — none of which exist in an
+inventory, and all of which the tool is blind to.</td>
+</tr>
+
+<tr>
+<td><strong>Safety has to be structural, and structure has to be tested from
+inside.</strong> A policy is a claim until something tries to break it.
+<code>terraform plan</code> shows what was declared; only execution under the real
+principal shows what that principal can do.</td>
+<td>Verified from the account: <strong>11/11 mutations denied · 0 inconclusive ·
+5/5 reads working</strong>. The verifier reports a third outcome —
+<em>inconclusive</em> — because its first version counted probes that died before
+authorization as passes.</td>
+</tr>
+
+<tr>
+<td><strong>The expensive defect is almost never in the model.</strong> In five of
+six projects it was in the instrument I built to measure the model, or in the
+sentence describing it.</td>
+<td>25 defects raised and tracked, most caught before they could reach a published
+conclusion. Two corrections ran against my own interest and were published anyway.</td>
+</tr>
+
+<tr>
+<td><strong>Knowing when to stop is a deliverable.</strong> I closed a pilot
+without shipping it when I established that no incident in its corpus required the
+mechanism the pilot existed to test.</td>
+<td>Recorded as the project's outcome, with its evidence — not as a silence or a
+quiet pivot.</td>
+</tr>
+
+<tr>
+<td><strong>An agent finishes what has a computable stopping condition</strong>,
+and does not finish the questions asking what should be measured or where to
+invest. Held as a <em>hypothesis with supporting evidence</em>, not a finding —
+the experiment that would test it is scoped and has not been run.</td>
+<td>Stated as open on purpose. Calling it a finding would be the exact defect this
+portfolio catalogues.</td>
+</tr>
+</table>
+</div>
+
+<h2>Claim → what stands behind it</h2>
+
+<div class="scroll">
+<table>
+<tr><th>Claim</th><th>What stands behind it</th></tr>
+
+<tr>
+<td>Sixteen years at GE across Aviation, Power and Vernova, ending as Senior
+Software Engineering Manager. Infrastructure cost cut 21%, deployment time 30%,
+98% on-time across 10+ concurrent programs.</td>
+<td><span class="chip">Not public</span> Employment record and references. Nothing on this page proves it — take it as a claim to be checked, not as evidence.</td>
+</tr>
+
+<tr>
+<td>A company-wide Autodesk agreement replacing 691 separate contracts with one
+model for 13,000+ users, ~$10M estimated savings.</td>
+<td><span class="chip">Not public</span> The commercial detail is not mine to publish. Same standing as above.</td>
+</tr>
+
+<tr>
+<td>People leadership for over a decade — a 12-engineer organisation, up to ~30
+matrixed. One filed patent, four invention disclosures.</td>
+<td><span class="chip">Not public</span> Named references available. Same standing as above.</td>
+</tr>
+
+<tr>
+<td>A migration planner benchmarked against a real 100-server estate: the
+documented dependencies held (44/44 resolving, 0 contract violations, no cycles),
+and across those 44 the two orderings disagree on all 44.</td>
+<td><a href="https://github.com/alexPantoja90210/aws-migration-planner">aws-migration-planner</a>
+→ <code>FINDINGS-100-servers.md</code>. Run it:
+<code>python planner.py --inventory inventory/servers-100.json</code></td>
+</tr>
+
+<tr>
+<td>A read-only IAM role denying everything outside an enumerated read set, proven
+from inside the account.</td>
+<td><a href="https://github.com/alexPantoja90210/aws-finops-guardian">aws-finops-guardian</a>
+→ <code>infra/main.tf</code>, <code>infra/verify_readonly.sh</code></td>
+</tr>
+
+<tr>
+<td>Agents that read real cloud data and cannot change it, behind eval gates with
+negative tests that must go red.</td>
+<td><a href="https://github.com/alexPantoja90210/agentic-copilots">agentic-copilots</a>
+→ <code>evals.py --selftest</code> in each project</td>
+</tr>
+
+<tr>
+<td>An agent reproduced <strong>11 of 13</strong> objective questions from
+another analyst's published deliverable, against a threshold frozen and committed
+<em>before</em> the first API call. 930,510 tokens, 12.8 minutes, 97,498 tickets.</td>
+<td><strong>Reproducible end to end, and none of it is mine to take credit for
+twice.</strong><br>
+<a href="https://github.com/alexPantoja90210/agentic-copilots/blob/main/analyst/PREREGISTRATION.md">analyst/PREREGISTRATION.md</a>
+was written before the run and <strong>bound to it</strong>: the runner writes this
+file's commit hash into <code>run_config.json</code>, so <strong>a run whose config
+carries a hash that is not an ancestor of the reported results is not
+scored.</strong> The scorer, the harness and six selftests are in
+<a href="https://github.com/alexPantoja90210/agentic-copilots/tree/main/analyst"><code>analyst/</code></a>.<br>
+The human deliverable I benchmarked against is
+<a href="https://github.com/febx1/IT-Ticket-Management-Excel-Project">another
+analyst's public project</a> — the dataset, the question set and the dashboard are
+theirs. <strong>Linked, never copied:</strong> that repository carries no licence,
+so linking is the only correct treatment. Fetch it from the source and my harness
+runs against the same input.</td>
+</tr>
+</table>
+</div>
+
+<h2>What I do not claim</h2>
+
+<div class="warnbox">
+<p>Stated here so nobody has to discover it.</p>
+<ul>
+<li><strong>No USD figure for LLM cost.</strong> That price file is
+<code>verified: false</code>. Token counts are publishable; dollars are not.</li>
+<li><strong>The migration cost figure is a list-price upper bound, not a
+costing.</strong> Any organisation running an estate that size pays negotiated
+rates, lower by an amount I do not know and <strong>will not estimate</strong>.</li>
+<li><strong>No saving is claimed</strong> from the planner. It computes the cost of
+a target, not a delta.</li>
+<li><strong>No conclusion about that migration's source records.</strong> What I
+retained is a sanitised, flattened extract. The dependency mapping lived in a
+system of record I no longer have access to, and nothing here is a statement about
+it.</li>
+<li><strong>No error attributed to the migration as it was delivered.</strong> The
+wave plan drawn at the time carries operational judgement the tool does not model
+and should not override.</li>
+<li><strong>No comparison against human analyst hours.</strong> The reference
+project never recorded how long the person took. It is the comparison everyone
+wants and the one that does not exist.</li>
+</ul>
+</div>
+
+<h2>How the work is run</h2>
+
+<p>Three standing rules, load-bearing rather than decorative:</p>
+
+<ul>
+<li><strong>Nothing exists if it is not in the tracker.</strong></li>
+<li><strong>Every defect is raised as a defect</strong>, even when it is fixed on
+the spot — including the ones that make my own earlier claims look worse.</li>
+<li><strong>Nothing exists if it is not in version control</strong>, with the hash
+on the issue before anything is called done.</li>
+</ul>
+
+<p>Roadmap, RAID register, decision log with trade-offs, definition of ready and
+done, and BPMN flows exist for the portfolio.</p>
+
+<div class="foot">
+<p><span class="kv">Public repos:</span>
+<a href="https://github.com/alexPantoja90210/aws-migration-planner">aws-migration-planner</a> ·
+<a href="https://github.com/alexPantoja90210/aws-finops-guardian">aws-finops-guardian</a> ·
+<a href="https://github.com/alexPantoja90210/agentic-copilots">agentic-copilots</a></p>
+<p><span class="kv">Profile:</span>
+<a href="https://www.linkedin.com/in/alejandropantoja/">linkedin.com/in/alejandropantoja</a></p>
+<p>If something here does not check out, tell me and I will correct it. That has
+happened repeatedly and it is the point.</p>
+</div>
+
+</div>
+</body>
+</html>

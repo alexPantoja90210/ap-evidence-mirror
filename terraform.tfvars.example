@@ -1,0 +1,9 @@
+region          = "us-east-1"
+bucket_name     = "ap-evidence-mirror"
+distribution_id = "EJU6I3KZQP1WO"
+oac_id          = "E1U54TFBHXX0V2"
+
+# Read out of the first terraform plan, not out of the console. The console
+# shows the OAC name and the origin id near each other and they look alike.
+oac_name  = "oac-ap-evidence-mirror.s3.amazonaws.com-mu33djf92fv"
+origin_id = "ap-evidence-mirror.s3.amazonaws.com-mu33cr7tf11"
