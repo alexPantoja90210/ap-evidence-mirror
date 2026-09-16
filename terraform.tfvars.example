@@ -1,9 +1,25 @@
-region          = "us-east-1"
-bucket_name     = "ap-evidence-mirror"
-distribution_id = "EJU6I3KZQP1WO"
-oac_id          = "E1U54TFBHXX0V2"
+# Copy to terraform.tfvars and fill in YOUR OWN values. terraform.tfvars is
+# gitignored. None of these are secrets, but none of them are mine to hand you
+# either: every one names a resource in a specific AWS account, and a copy of
+# this file with someone else's identifiers in it produces an import plan that
+# points at infrastructure you do not own.
+#
+# Note what is NOT here: the account id. main.tf derives it at plan time from
+# data.aws_caller_identity, so it never has to be written down and never enters
+# this repository.
 
-# Read out of the first terraform plan, not out of the console. The console
-# shows the OAC name and the origin id near each other and they look alike.
-oac_name  = "oac-ap-evidence-mirror.s3.amazonaws.com-mu33djf92fv"
-origin_id = "ap-evidence-mirror.s3.amazonaws.com-mu33cr7tf11"
+region      = "us-east-1"
+bucket_name = "REPLACE-with-your-bucket-name"
+
+# Console: CloudFront > Distributions. The ID column, not the domain name.
+distribution_id = "REPLACE-E00000000000A"
+
+# Console: CloudFront > Origin access. The ID column.
+oac_id = "REPLACE-E00000000000A"
+
+# Read these two out of the first `terraform plan`, not out of the console.
+# The console shows the OAC name and the origin id near each other and they
+# look almost identical. Getting them the wrong way round costs an hour, and
+# the plan will tell you which is which for free.
+oac_name  = "REPLACE-oac-your-bucket.s3.amazonaws.com-xxxxxxxxxxx"
+origin_id = "REPLACE-your-bucket.s3.amazonaws.com-xxxxxxxxxxx"
